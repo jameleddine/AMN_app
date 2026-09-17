@@ -43,7 +43,7 @@ export const BeforeAfterGallery: React.FC = () => {
             Témoins de notre savoir-faire
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
-            Nos Réalisations sur le Terrain à Isère et Savoie
+            Nos Réalisations sur le Terrain en Isère et Savoie
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 mt-2 sm:mt-3">
             Découvrez en images la rigueur et l'efficacité des interventions menées par AMN : glissez le curseur pour comparer l'état initial et le résultat final.
