@@ -24,7 +24,7 @@ interface HeroVideoSectionProps {
 }
 
 export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote }) => {
-  const [videoSource, setVideoSource] = useState<string>('/video-amn-demo.webm');
+  const [videoSource, setVideoSource] = useState<string>('/2.mp4');
   const [customFileName, setCustomFileName] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
   const [isMuted, setIsMuted] = useState<boolean>(true); // Start muted so browsers allow autoplay
