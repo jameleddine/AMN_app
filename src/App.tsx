@@ -58,9 +58,9 @@ export default function App() {
         <ChaletSpecialSection onOpenQuote={handleOpenQuote} />
 
         {/* 5. Industrial Equipment & Safety Credentials */}
-        <EquipmentAndSafety />
+        {/* <EquipmentAndSafety /> */}
 
-        {/* 6. Testimonials from Grenoble & Isère */}
+        {/* 6. Testimonials from Isère et Savoie & Isère */}
         <TestimonialsSection />
 
         {/* 7. Instant Interactive Quote Calculator */}

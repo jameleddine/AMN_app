@@ -43,10 +43,10 @@ export const BeforeAfterGallery: React.FC = () => {
             Témoins de notre savoir-faire
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
-            Nos Réalisations sur le Terrain à Grenoble
+            Nos Réalisations sur le Terrain à Isère et Savoie
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 mt-2 sm:mt-3">
-            Découvrez en images la rigueur et l'efficacité des interventions menées par Aymen Mejri : glissez le curseur pour comparer l'état initial et le résultat final.
+            Découvrez en images la rigueur et l'efficacité des interventions menées par AMN : glissez le curseur pour comparer l'état initial et le résultat final.
           </p>
 
           {/* Filter tabs - Touch friendly wrapping */}
@@ -239,7 +239,7 @@ export const BeforeAfterGallery: React.FC = () => {
         </div>
 
         {/* Real photo gallery callout mentioning Aymen's real tools */}
-        <div className="mt-12 sm:mt-16 bg-gradient-to-r from-slate-950 via-slate-900 to-amber-950/40 border border-slate-800 rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* <div className="mt-12 sm:mt-16 bg-gradient-to-r from-slate-950 via-slate-900 to-amber-950/40 border border-slate-800 rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
               Technique & Rigueur AMN
@@ -258,8 +258,8 @@ export const BeforeAfterGallery: React.FC = () => {
           >
             <span>Confier votre projet à AMN</span>
           </a>
-        </div>
-      </div>
+        </div>*/}
+      </div> 
 
       {/* Lightbox Modal - Mobile Responsive */}
       {selectedProject && (

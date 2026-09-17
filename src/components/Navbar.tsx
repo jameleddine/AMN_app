@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, MessageCircle, Menu, X, Sparkles, Clock, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Menu, X, Sparkles, Clock, ShieldCheck, MailCheck } from 'lucide-react';
 import { COMPANY_INFO } from '../data/servicesData';
 
 interface NavbarProps {
@@ -29,12 +29,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Disponible 7j/7 • Grenoble & Agglo (38000)
+              Disponible 7j/7 • Isère et Savoie & Agglo (38000)
             </span>
             <span className="hidden sm:inline-block text-slate-600">|</span>
             <span className="hidden md:flex items-center gap-1.5 text-slate-300">
               <MapPin className="w-3.5 h-3.5 text-amber-400" />
-              Grenoble (38000), Isère & Stations Alpines
+              Isère et Savoie (38000), Isère & Stations Alpines
             </span>
             <span className="hidden lg:flex items-center gap-1.5 text-slate-300">
               <Clock className="w-3.5 h-3.5 text-amber-400" />
@@ -43,6 +43,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
           </div>
 
           <div className="flex items-center gap-4 text-xs">
+            <a
+              href="#"
+              className="hidden sm:flex items-center gap-1.5 hover:text-amber-300 transition-colors"
+              title="SIRET"
+            >
+              <MailCheck className="w-3.5 h-3.5 text-amber-400" />
+              <span>{COMPANY_INFO.siret}</span>
+            </a>
             <a
               href={`mailto:${COMPANY_INFO.email}`}
               className="hidden sm:flex items-center gap-1.5 hover:text-amber-300 transition-colors"
@@ -92,7 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                   AMN
                 </span>
                 <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-200 px-1.5 sm:px-2 py-0.5 rounded-md">
-                  Grenoble 38
+                  Isère et Savoie 38
                 </span>
               </div>
               <p className="text-[11px] sm:text-xs text-slate-500 font-medium hidden xs:block">

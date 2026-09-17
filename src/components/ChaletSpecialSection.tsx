@@ -26,7 +26,7 @@ export const ChaletSpecialSection: React.FC<ChaletSpecialSectionProps> = ({ onOp
             </h2>
 
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed">
-              Basé à Grenoble, AMN intervient au cœur des stations alpines et des massifs isérois (Chamrousse, Alpe d'Huez, Les 2 Alpes, Vercors, Belledonne). Les résidences de montagne exigent un soin méticuleux pour préserver l'authenticité de leurs matériaux nobles tout en offrant un standing irréprochable aux résidents et vacanciers.
+              Basé à Isère et Savoie, AMN intervient au cœur des stations alpines et des massifs isérois (Chamrousse, Alpe d'Huez, Les 2 Alpes, Vercors, Belledonne). Les résidences de montagne exigent un soin méticuleux pour préserver l'authenticité de leurs matériaux nobles tout en offrant un standing irréprochable aux résidents et vacanciers.
             </p>
 
             {/* Chalet specific features */}

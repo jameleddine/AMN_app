@@ -53,7 +53,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuote })
             Nos Prestations Spécialisées
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
-            Des Solutions de Propreté Complètes à Grenoble & en Isère
+            Des Solutions de Propreté Complètes à Isère et Savoie
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 mt-2 sm:mt-3">
             AMN mobilise un parc de matériel industriel de pointe pour répondre à toutes vos exigences de remise à neuf, d'entretien régulier ou de fin de chantier.
@@ -127,68 +127,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuote })
         </div>
 
         {/* Selected Service Detailed Focus Box */}
-        {selectedService && (
-          <div className="bg-white rounded-2xl border border-amber-200/80 p-5 sm:p-8 shadow-md">
-            <div className="flex flex-col lg:flex-row items-start justify-between gap-6">
-              <div className="max-w-3xl">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded">
-                    Zoom technique
-                  </span>
-                  <span className="text-xs text-slate-500 font-medium">
-                    {selectedService.idealFor}
-                  </span>
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-                  {selectedService.title}
-                </h3>
-
-                <p className="text-sm sm:text-base text-slate-700 mt-2 leading-relaxed">
-                  {selectedService.fullDesc}
-                </p>
-
-                {/* Equipment used */}
-                <div className="mt-4 pt-4 border-t border-slate-100">
-                  <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5 uppercase tracking-wider mb-2">
-                    <Wrench className="w-4 h-4 text-amber-600" />
-                    Matériel professionnel mobilisé :
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedService.equipment.map((eq, i) => (
-                      <span
-                        key={i}
-                        className="text-xs font-medium text-slate-700 bg-amber-50/70 px-3 py-1 rounded-md border border-amber-200/60"
-                      >
-                        ✓ {eq}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Box on the right */}
-              <div className="w-full lg:w-72 shrink-0 bg-slate-50 p-4 sm:p-5 rounded-xl border border-amber-100 text-center flex flex-col justify-between">
-                <div>
-                  <span className="text-xs text-slate-500 font-semibold block">
-                    Besoin de cette prestation ?
-                  </span>
-                  <p className="text-sm font-bold text-slate-800 mt-1">
-                    Évaluation sur site ou sur photos à Grenoble
-                  </p>
-                </div>
-
-                <button
-                  onClick={() => onOpenQuote(selectedService.id)}
-                  className="mt-4 w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-extrabold py-2.5 px-4 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer active:scale-98"
-                >
-                  <span>Demander un devis</span>
-                  <ArrowRight className="w-4 h-4 text-slate-950" />
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+        
+          
       </div>
     </section>
   );

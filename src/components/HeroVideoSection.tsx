@@ -147,7 +147,7 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-            Entreprise de Nettoyage & Rénovation • Grenoble (38000)
+            Entreprise de Nettoyage & Rénovation • Isère et Savoie (38000)
           </div>
 
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight mb-3 sm:mb-4">
@@ -155,7 +155,7 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed font-normal">
-            Remise en état après travaux, traitement de sol à la monobrosse, vitrerie grande hauteur, chalets alpins et débarras garages. Un artisan qualifié au service des professionnels et particuliers en Isère.
+            Remise en état après travaux, traitement de sol, vitrerie grande hauteur, chalets alpins et débarras garages. Un artisan qualifié au service des professionnels et particuliers en Isère.
           </p>
         </div>
 
@@ -292,7 +292,7 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
               </div>
 
               {/* Direct Attach Video Tool & Indicator */}
-              <div className="bg-slate-900 px-3 sm:px-4 py-2.5 text-xs border-t border-slate-800 flex items-center justify-between flex-wrap gap-2 text-slate-300">
+              {/* <div className="bg-slate-900 px-3 sm:px-4 py-2.5 text-xs border-t border-slate-800 flex items-center justify-between flex-wrap gap-2 text-slate-300">
                 <div className="flex items-center gap-2">
                   <Film className="w-4 h-4 text-amber-400 shrink-0" />
                   <span className="text-[11px] sm:text-xs text-slate-300">
@@ -311,7 +311,7 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
                     onChange={handleFileChange}
                   />
                 </label>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -326,11 +326,11 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
                       Contact Direct Artisan
                     </span>
                     <h3 className="text-xl font-bold text-white mt-0.5">
-                      Aymen Mejri • AMN Nettoyage
+                      AMN Nettoyage
                     </h3>
                     <p className="text-xs text-slate-300 flex items-center gap-1 mt-1">
                       <MapPin className="w-3.5 h-3.5 text-amber-400" />
-                      Grenoble (38000), Agglomération & Isère
+                      Isère et Savoie (38000)
                     </p>
                   </div>
 
@@ -372,7 +372,7 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                    <span>Matériel pro : Monobrosse Wirbel 154, injection-extraction</span>
+                    <span>Matériel professionnel</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
@@ -427,7 +427,7 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
               Contacter AMN par WhatsApp
             </h4>
             <p className="text-xs text-slate-500 mt-1 mb-4">
-              Scannez le QR code avec votre smartphone pour ouvrir la conversation avec Aymen Mejri
+              Scannez le QR code avec votre smartphone pour ouvrir la conversation avec AMN
             </p>
 
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 inline-block shadow-inner">

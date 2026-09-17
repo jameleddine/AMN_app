@@ -11,10 +11,10 @@ export const TestimonialsSection: React.FC = () => {
             Avis & Confiance
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
-            Ce que disent nos clients à Grenoble & en Isère
+            Ce que disent nos clients à Isère et Savoie
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 mt-2 sm:mt-3">
-            Syndics, gestionnaires immobiliers, artisans du BTP et propriétaires de chalets font confiance à la rigueur d'Aymen Mejri.
+            Syndics, gestionnaires immobiliers, artisans du BTP et propriétaires de chalets font confiance à la rigueur d'AMN.
           </p>
         </div>
 

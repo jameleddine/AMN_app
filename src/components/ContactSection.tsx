@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   Building,
   ShieldCheck,
+  MailCheckIcon,
 } from 'lucide-react';
 import { COMPANY_INFO, SERVICE_AREAS } from '../data/servicesData';
 
@@ -40,10 +41,10 @@ export const ContactSection: React.FC = () => {
             Contact Direct & Devis
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
-            Contactez AMN Nettoyage à Grenoble
+            Contactez AMN Nettoyage à Isère et Savoie
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 mt-2 sm:mt-3">
-            Vous avez un projet de remise en état, un sol à traiter ou une fin de chantier ? Aymen Mejri vous répond personnellement dans la journée.
+            Vous avez un projet de remise en état, un sol à traiter ou une fin de chantier ? AMN vous répond personnellement dans la journée.
           </p>
         </div>
 
@@ -97,6 +98,21 @@ export const ContactSection: React.FC = () => {
                   </div>
                 </div>
 
+                 <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <MailCheckIcon className="w-4 h-4 text-amber-400" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-slate-400 block">SIRET :</span>
+                    <a
+                      href={`mailto:${COMPANY_INFO.email}`}
+                      className="text-sm font-semibold text-white hover:text-amber-300 transition-colors break-all"
+                    >
+                      {COMPANY_INFO.siret}
+                    </a>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-3">
                   <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
                     <MapPin className="w-4 h-4 text-orange-400" />
@@ -107,7 +123,7 @@ export const ContactSection: React.FC = () => {
                       {COMPANY_INFO.location}
                     </span>
                     <p className="text-xs text-slate-400 mt-0.5">
-                      Interventions sur toute la métropole de Grenoble et le département de l'Isère (38).
+                      Interventions sur toute la métropole de Isère et Savoie et le département de l'Isère (38).
                     </p>
                   </div>
                 </div>
@@ -199,7 +215,7 @@ export const ContactSection: React.FC = () => {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                    Envoyer un message à Aymen Mejri
+                    Envoyer un message à AMN
                   </h3>
                   <p className="text-xs text-slate-500 mt-0.5">
                     Réponse assurée sous 2 à 24 heures maximum
@@ -268,7 +284,7 @@ export const ContactSection: React.FC = () => {
                     >
                       <option value="Remise en état">Remise en état complète</option>
                       <option value="Nettoyage après travaux">Nettoyage après travaux / Fin de chantier</option>
-                      <option value="Traitement de sol">Traitement de sol & Monobrosse</option>
+                      <option value="Traitement de sol">Traitement de sol</option>
                       <option value="Vitrerie grande hauteur">Vitrerie grande hauteur & Verrières</option>
                       <option value="Chalets de montagne">Nettoyage & Remise en état de Chalets</option>
                       <option value="Débarras garages et parkings">Débarras & Nettoyage Garages / Parkings</option>
@@ -296,7 +312,7 @@ export const ContactSection: React.FC = () => {
                   className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-extrabold py-3.5 px-6 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 text-sm cursor-pointer active:scale-95"
                 >
                   <Send className="w-4 h-4 text-slate-950" />
-                  <span>Envoyer mon message à Aymen Mejri</span>
+                  <span>Envoyer mon message à AMN</span>
                 </button>
               </form>
             </div>

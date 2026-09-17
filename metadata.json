@@ -1,6 +1,6 @@
 {
-  "name": "AMN Nettoyage & Remise en État Grenoble",
-  "description": "Site officiel de l'entreprise AMN à Grenoble (38000) : remise en état, nettoyage après travaux, traitement des sols, vitrerie grande hauteur, chalets et débarras garages.",
+  "name": "AMN Nettoyage & Remise en État Isère et Savoie",
+  "description": "Site officiel de l'entreprise AMN à Isère et Savoie (38000) : remise en état, nettoyage après travaux, traitement des sols, vitrerie grande hauteur, chalets et débarras garages.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

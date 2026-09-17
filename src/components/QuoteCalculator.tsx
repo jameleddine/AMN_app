@@ -29,7 +29,7 @@ export const QuoteCalculator: React.FC<QuoteCalculatorProps> = ({ initialService
   const [name, setName] = useState<string>('');
   const [phone, setPhone] = useState<string>('');
   const [email, setEmail] = useState<string>('');
-  const [locationCity, setLocationCity] = useState<string>('Grenoble');
+  const [locationCity, setLocationCity] = useState<string>('Isère et Savoie');
   const [notes, setNotes] = useState<string>('');
   const [submitted, setSubmitted] = useState<boolean>(false);
 
@@ -131,7 +131,7 @@ Merci d'avance pour votre retour rapide.`;
             Simulateur de Devis Gratuit en Ligne
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 mt-2 sm:mt-3">
-            Estimez instantanément le budget de votre nettoyage à Grenoble, personnalisez vos options et transmettez votre demande en 1 clic directement à Aymen Mejri.
+            Estimez instantanément le budget de votre nettoyage à Isère et Savoie, personnalisez vos options et transmettez votre demande en 1 clic directement à AMN.
           </p>
         </div>
 
@@ -307,7 +307,7 @@ Merci d'avance pour votre retour rapide.`;
                     <div>
                       <input
                         type="text"
-                        placeholder="Ville (ex: Grenoble 38000)"
+                        placeholder="Ville (ex: Isère et Savoie 38000)"
                         value={locationCity}
                         onChange={(e) => setLocationCity(e.target.value)}
                         className="w-full text-sm bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
@@ -418,7 +418,7 @@ Merci d'avance pour votre retour rapide.`;
               Demande pré-remplie avec succès !
             </h4>
             <p className="text-xs text-emerald-800 mt-1">
-              Votre message a été transmis à Aymen Mejri ({COMPANY_INFO.email}). Vous recevrez une réponse sous 24h ouvrées.
+              Votre message a été transmis à AMN ({COMPANY_INFO.email}). Vous recevrez une réponse sous 24h ouvrées.
             </p>
           </div>
         )}

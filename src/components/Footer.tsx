@@ -18,13 +18,13 @@ export const Footer: React.FC = () => {
                   AMN Nettoyage
                 </span>
                 <span className="text-xs text-amber-400 font-medium">
-                  Grenoble & Isère (38000)
+                  Isère et Savoie & Isère (38000)
                 </span>
               </div>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              Entreprise spécialisée dans la remise en état, le nettoyage après travaux, le traitement des sols à la monobrosse, la vitrerie grande hauteur, l'entretien des chalets alpins et le débarras de parkings.
+              Entreprise spécialisée dans la remise en état, le nettoyage après travaux, le traitement des sols, la vitrerie grande hauteur, l'entretien des chalets alpins et le débarras de parkings.
             </p>
 
             <div className="pt-2">
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
               Déplacements rapides 7j/7 avec véhicule et matériel embarqué :
             </p>
             <ul className="space-y-1.5 text-xs text-slate-300">
-              <li>• Grenoble Centre & Agglomération (38000)</li>
+              <li>• Isère et Savoie Centre & Agglomération (38000)</li>
               <li>• Saint-Martin-d'Hères, Échirolles, Meylan</li>
               <li>• Fontaine, Sassenage, Saint-Égrève</li>
               <li>• Crolles & Vallée du Grésivaudan</li>
@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} AMN Nettoyage & Remise en État. Tous droits réservés.</p>
           <div className="flex items-center gap-4">
-            <span>Grenoble (38000) • France</span>
+            <span>Isère et Savoie (38000) • France</span>
             <span>•</span>
             <span className="text-slate-400">Artisan Propreté & Rénovation</span>
           </div>
