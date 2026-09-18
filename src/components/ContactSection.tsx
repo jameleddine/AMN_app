@@ -13,6 +13,7 @@ import {
   MailCheckIcon,
 } from 'lucide-react';
 import { COMPANY_INFO, SERVICE_AREAS } from '../data/servicesData';
+import { WhatsAppQRCode } from './WhatsAppQRCode';
 
 export const ContactSection: React.FC = () => {
   const [name, setName] = useState('');
@@ -142,55 +143,8 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Scannable WhatsApp Box */}
-              <div className="mt-7 sm:mt-8 p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
-                <div className="bg-white p-2 rounded-xl shrink-0 shadow">
-                  <svg className="w-14 h-14 sm:w-16 sm:h-16" viewBox="0 0 100 100" fill="none">
-                    <rect width="100" height="100" fill="white" />
-                    <rect x="10" y="10" width="28" height="28" fill="black" />
-                    <rect x="14" y="14" width="20" height="20" fill="white" />
-                    <rect x="18" y="18" width="12" height="12" fill="black" />
-                    <rect x="62" y="10" width="28" height="28" fill="black" />
-                    <rect x="66" y="14" width="20" height="20" fill="white" />
-                    <rect x="70" y="18" width="12" height="12" fill="black" />
-                    <rect x="10" y="62" width="28" height="28" fill="black" />
-                    <rect x="14" y="66" width="20" height="20" fill="white" />
-                    <rect x="18" y="70" width="12" height="12" fill="black" />
-                    <rect x="42" y="14" width="6" height="6" fill="black" />
-                    <rect x="52" y="14" width="6" height="6" fill="black" />
-                    <rect x="42" y="24" width="6" height="6" fill="black" />
-                    <rect x="52" y="32" width="6" height="6" fill="black" />
-                    <rect x="10" y="44" width="6" height="6" fill="black" />
-                    <rect x="22" y="44" width="6" height="6" fill="black" />
-                    <rect x="34" y="44" width="6" height="6" fill="black" />
-                    <rect x="44" y="44" width="12" height="12" fill="#25D366" />
-                    <rect x="62" y="44" width="6" height="6" fill="black" />
-                    <rect x="74" y="44" width="6" height="6" fill="black" />
-                    <rect x="84" y="44" width="6" height="6" fill="black" />
-                    <rect x="44" y="62" width="6" height="6" fill="black" />
-                    <rect x="54" y="70" width="6" height="6" fill="black" />
-                    <rect x="64" y="62" width="6" height="6" fill="black" />
-                    <rect x="74" y="72" width="6" height="6" fill="black" />
-                    <rect x="84" y="82" width="6" height="6" fill="black" />
-                    <rect x="50" y="82" width="6" height="6" fill="black" />
-                  </svg>
-                </div>
-                <div>
-                  <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider block">
-                    WhatsApp Direct
-                  </span>
-                  <p className="text-xs text-slate-300 mt-0.5">
-                    Scannez ou cliquez pour démarrer une conversation immédiate.
-                  </p>
-                  <a
-                    href={COMPANY_INFO.whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 px-3 py-1 rounded-lg mt-2 transition-colors active:scale-95"
-                  >
-                    <MessageCircle className="w-3.5 h-3.5" />
-                    Ouvrir le chat
-                  </a>
-                </div>
+              <div className="mt-7 sm:mt-8 p-4 rounded-2xl bg-white/5 border border-white/10">
+                <WhatsAppQRCode size={140} showDetails={true} />
               </div>
             </div>
 

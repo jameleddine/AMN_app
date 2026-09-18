@@ -95,7 +95,7 @@ Je souhaite recevoir un devis pour mes locaux :
 - Délai d'intervention : ${urgency === 'urgent' ? 'Urgent (sous 24h-48h)' : 'Standard (planifié)'}
 - Nettoyage vitres inclus : ${needWindows ? 'Oui' : 'Non'}
 - Ville / Secteur : ${locationCity} (38)
-- Estimation indicative : entre ${minEst} € et ${maxEst} € TTC
+- Estimation indicative : entre ${minEst} € et ${maxEst} €
 
 Mes coordonnées :
 - Nom : ${name || 'Non précisé'}
@@ -353,7 +353,6 @@ Merci d'avance pour votre retour rapide.`;
                     <span className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-200">
                       {minEst} € – {maxEst} €
                     </span>
-                    <span className="text-xs text-slate-400 font-medium">TTC</span>
                   </div>
                   <p className="text-xs text-slate-400 mt-2">
                     Fourchette estimée pour {surface} m² de surface traitée avec matériel professionnel inclus.

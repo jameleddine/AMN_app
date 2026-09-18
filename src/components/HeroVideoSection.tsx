@@ -18,6 +18,8 @@ import {
   Check,
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/servicesData';
+import { WhatsAppQRCode } from './WhatsAppQRCode';
+import QRCode from 'qrcode';
 
 interface HeroVideoSectionProps {
   onOpenQuote: (serviceId?: string) => void;
@@ -38,10 +40,35 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
   const playerContainerRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const [qrDataUrl, setQrDataUrl] = useState<string>('');
+
   // Synchronize playback state with video element
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+    let isMounted = true;
+    const generateQR = async () => {
+          try {
+            // High-contrast ISO-compliant QR Code for WhatsApp direct click-to-chat
+            const url = COMPANY_INFO.whatsappUrl;
+            const dataUrl = await QRCode.toDataURL(url, {
+              width: 512, // High resolution for razor-sharp camera scanning
+              margin: 2, // Standard quiet-zone required for instant phone camera recognition
+              color: {
+                dark: '#000000', // Pure black for maximum optical contrast
+                light: '#ffffff', // Pure white
+              },
+              errorCorrectionLevel: 'M',
+            });
+            if (isMounted) {
+              setQrDataUrl(dataUrl);
+            }
+          } catch (err) {
+            console.error('Failed to generate WhatsApp QR code:', err);
+          }
+        };
+    
+        generateQR();
 
     const handleTimeUpdate = () => setCurrentTime(video.currentTime);
     const handleLoadedMetadata = () => {
@@ -69,6 +96,7 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
       video.removeEventListener('timeupdate', handleTimeUpdate);
       video.removeEventListener('loadedmetadata', handleLoadedMetadata);
       video.removeEventListener('ended', handleEnded);
+      isMounted = false;
     };
   }, [videoSource]);
 
@@ -431,35 +459,19 @@ export const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({ onOpenQuote 
             </p>
 
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 inline-block shadow-inner">
-              <svg className="w-48 h-48 mx-auto" viewBox="0 0 100 100" fill="none">
-                <rect width="100" height="100" fill="white" />
-                <rect x="10" y="10" width="28" height="28" fill="black" />
-                <rect x="14" y="14" width="20" height="20" fill="white" />
-                <rect x="18" y="18" width="12" height="12" fill="black" />
-                <rect x="62" y="10" width="28" height="28" fill="black" />
-                <rect x="66" y="14" width="20" height="20" fill="white" />
-                <rect x="70" y="18" width="12" height="12" fill="black" />
-                <rect x="10" y="62" width="28" height="28" fill="black" />
-                <rect x="14" y="66" width="20" height="20" fill="white" />
-                <rect x="18" y="70" width="12" height="12" fill="black" />
-                <rect x="42" y="14" width="6" height="6" fill="black" />
-                <rect x="52" y="14" width="6" height="6" fill="black" />
-                <rect x="42" y="24" width="6" height="6" fill="black" />
-                <rect x="52" y="32" width="6" height="6" fill="black" />
-                <rect x="10" y="44" width="6" height="6" fill="black" />
-                <rect x="22" y="44" width="6" height="6" fill="black" />
-                <rect x="34" y="44" width="6" height="6" fill="black" />
-                <rect x="44" y="44" width="12" height="12" fill="#25D366" />
-                <rect x="62" y="44" width="6" height="6" fill="black" />
-                <rect x="74" y="44" width="6" height="6" fill="black" />
-                <rect x="84" y="44" width="6" height="6" fill="black" />
-                <rect x="44" y="62" width="6" height="6" fill="black" />
-                <rect x="54" y="70" width="6" height="6" fill="black" />
-                <rect x="64" y="62" width="6" height="6" fill="black" />
-                <rect x="74" y="72" width="6" height="6" fill="black" />
-                <rect x="84" y="82" width="6" height="6" fill="black" />
-                <rect x="50" y="82" width="6" height="6" fill="black" />
-              </svg>
+              {/* Real Scannable WhatsApp Box */}
+                {qrDataUrl ? (
+            <img
+              src={qrDataUrl}
+              alt="QR Code WhatsApp AMN Nettoyage Grenoble"
+              className="w-32 h-32 sm:w-36 sm:h-36 object-contain rounded-md"
+              style={{ imageRendering: 'pixelated' }}
+            />
+          ) : (
+            <div className="w-32 h-32 sm:w-36 sm:h-36 bg-slate-100 animate-pulse rounded-md flex items-center justify-center">
+              <span className="text-xs text-slate-400 font-medium">Génération...</span>
+            </div>
+          )}
             </div>
 
             <div className="mt-4 space-y-1">
