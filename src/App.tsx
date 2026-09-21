@@ -11,6 +11,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { Phone, MessageCircle, Sparkles, ArrowUp } from 'lucide-react';
 import { COMPANY_INFO } from './data/servicesData';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function App() {
   const [selectedServiceForQuote, setSelectedServiceForQuote] = useState<string | undefined>(undefined);
@@ -113,6 +114,8 @@ export default function App() {
           <ArrowUp className="w-5 h-5" />
         </button>
       )}
+      <SpeedInsights />
     </div>
+    
   );
 }
