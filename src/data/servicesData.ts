@@ -255,7 +255,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
   },
     {
     id: 'sol-parquet-carrelage_2',
-    title: 'Décapage & Lustrage Sol Carrelage Imitation Bois',
+    title: 'Décapage sol industriel',
     category: 'sols',
     categoryLabel: 'Traitement de Sol',
     location: 'Commerce & Restaurant, Isère et Savoie',
@@ -270,7 +270,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
   },
     {
     id: 'sol-parquet-carrelage_3',
-    title: 'Décapage & Lustrage Sol Carrelage Imitation Bois',
+    title: 'Détartrage faïence remise en état Pare-baignoire',
     category: 'sols',
     categoryLabel: 'Traitement de Sol',
     location: 'Commerce & Restaurant, Isère et Savoie',
@@ -285,7 +285,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
   },
    {
     id: 'sol-parquet-carrelage_4',
-    title: 'Décapage & Lustrage Sol Carrelage Imitation Bois',
+    title: 'Décapage cirage sol lino',
     category: 'sols',
     categoryLabel: 'Traitement de Sol',
     location: 'Commerce & Restaurant, Isère et Savoie',
